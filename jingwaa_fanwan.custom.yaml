@@ -1,0 +1,26 @@
+# Modified from https://github.com/baopaau/rime-tungdzih/
+# Rime schema patch
+# (按需啓用)
+patch:
+  # 繪文字
+  # switches/@next:
+  #  name: emoji
+  #  states: [ 文字 , 繪文字 ]
+  #  reset: 1
+  
+  # engine/filters/@next: simplifier@emoji
+  
+  # emoji:
+  #  opencc_config: emoji.json
+  #  option_name: emoji
+  #  tips: all
+
+  # 語言模型
+  grammar: /hant?
+  
+  # Lua腳本
+  # "engine/translators/@after last": "lua_translator@unicode_translator"
+  # engine/translators/@next: "lua_translator@calculator_translator"
+  # recognizer/patterns/unicode: "^U.*$"
+  # recognizer/patterns/expression: "^=.*$"
+  
